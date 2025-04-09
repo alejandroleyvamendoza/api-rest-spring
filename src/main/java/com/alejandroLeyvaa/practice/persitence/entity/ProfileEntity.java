@@ -15,6 +15,6 @@ public class ProfileEntity {
     @Column(length = 80)
     private String password;
 
-    @OneToOne(mappedBy = "profile")
-    private UserEntity user;
+    //@OneToOne(mappedBy = "profile")
+    //private UserEntity user;
 }

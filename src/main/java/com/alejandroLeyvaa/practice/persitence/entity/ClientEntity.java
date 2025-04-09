@@ -1,10 +1,16 @@
 package com.alejandroLeyvaa.practice.persitence.entity;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.time.LocalDateTime;
 
 @Entity
+@Getter
+@Setter
+@NoArgsConstructor
 @Table(name = "Client")
 public class ClientEntity {
     @Id
@@ -20,15 +26,15 @@ public class ClientEntity {
     @Column(unique = true, length = 16)
     private String waId;
 
-    @ManyToOne
-    @JoinColumn(name = "manager_id")
-    private UserEntity manager;
+    //@ManyToOne
+    //@JoinColumn(name = "manager_id")
+    //private UserEntity manager;
 
     @Enumerated(EnumType.STRING)
     private Status status = Status.ACTIVE;
 
-    private LocalDateTime createdAt = LocalDateTime.now();
-    private LocalDateTime updatedAt;
-    private Integer createdBy;
-    private Integer updatedBy;
+    //private LocalDateTime createdAt = LocalDateTime.now();
+    //private LocalDateTime updatedAt;
+    //private Integer createdBy;
+    //private Integer updatedBy;
 }

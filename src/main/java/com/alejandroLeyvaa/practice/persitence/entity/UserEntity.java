@@ -25,7 +25,9 @@ public class UserEntity {
     @Column(unique = true, length = 16)
     private String waId;
 
-    @ManyToOne
+    /*
+    *
+    *     @ManyToOne
     @JoinColumn(name = "role_id")
     private RoleEntity role;
 
@@ -42,6 +44,8 @@ public class UserEntity {
 
     @Enumerated(EnumType.STRING)
     private Status status = Status.ACTIVE;
+    *
+    * */
 
     private LocalDateTime createdAt = LocalDateTime.now();
     private LocalDateTime updatedAt;

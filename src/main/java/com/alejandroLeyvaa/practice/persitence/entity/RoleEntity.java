@@ -15,8 +15,8 @@ public class RoleEntity {
     @Column(unique = true)
     private String name;
 
-    @OneToMany(mappedBy = "role")
-    private List<UserEntity> users;
+    //@OneToMany(mappedBy = "role")
+    //private List<UserEntity> users;
 
     @Enumerated(EnumType.STRING)
     private Status status = Status.ACTIVE;
