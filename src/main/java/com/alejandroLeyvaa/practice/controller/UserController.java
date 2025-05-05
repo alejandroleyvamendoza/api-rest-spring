@@ -1,7 +1,7 @@
 package com.alejandroLeyvaa.practice.controller;
 
-import com.alejandroLeyvaa.practice.persitence.entity.ClientEntity;
-import com.alejandroLeyvaa.practice.domain.service.ClientService;
+import com.alejandroLeyvaa.practice.persitence.entity.UserEntity;
+import com.alejandroLeyvaa.practice.domain.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,16 +11,16 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/client")
-public class ClientController {
+@RequestMapping("/user")
+public class UserController {
 
     @Autowired
-    private ClientService clientService;
+    private UserService userService;
 
     @GetMapping("/all")
-    public ResponseEntity<List<ClientEntity>> getAllClients() {
+    public ResponseEntity<List<UserEntity>> getAllUsers() {
 
-        List<ClientEntity> clientEntityList = this.clientService.getAll();
-        return ResponseEntity.ok(clientEntityList);
+        List<UserEntity> userEntityList = this.userService.getAll();
+        return ResponseEntity.ok(userEntityList);
     }
 }

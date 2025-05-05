@@ -1,7 +1,7 @@
-package com.alejandroLeyvaa.practice.service;
+package com.alejandroLeyvaa.practice.domain.service;
 
 import com.alejandroLeyvaa.practice.persitence.entity.ClientEntity;
-import com.alejandroLeyvaa.practice.persitence.repository.ClientRepository;
+import com.alejandroLeyvaa.practice.domain.repository.ClientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
