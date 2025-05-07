@@ -5,11 +5,11 @@ import jakarta.persistence.*;
 
 public class ProductDto {
 
-    private Integer idProduct;
+    private Integer productId;
 
-    private String name;
+    private String productName;
 
-    private Integer idCategory;
+    private Integer categoryId;
 
 
     private CategoryEntity category;
